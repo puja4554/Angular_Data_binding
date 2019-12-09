@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Gaming": {
+    "Gaming-control": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Gaming",
+            "outputPath": "dist/Gaming-control",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Gaming:build"
+            "browserTarget": "Gaming-control:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Gaming:build:production"
+              "browserTarget": "Gaming-control:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Gaming:build"
+            "browserTarget": "Gaming-control:build"
           }
         },
         "test": {
@@ -89,6 +89,7 @@
               "src/assets"
             ],
             "styles": [
+              "../node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -111,15 +112,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Gaming:serve"
+            "devServerTarget": "Gaming-control:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Gaming:serve:production"
+              "devServerTarget": "Gaming-control:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "Gaming"
+  "defaultProject": "Gaming-control"
 }
